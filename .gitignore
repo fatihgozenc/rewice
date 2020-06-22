@@ -1,0 +1,5 @@
+wp-content/themes/rewice/node_modules
+wp-config.php
+.DS_Store
+.malumatenv
+malumatwin.bat

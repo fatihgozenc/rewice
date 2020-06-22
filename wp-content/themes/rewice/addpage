@@ -1,0 +1,5 @@
+#!/bin/bash
+read -p "Name of the page: " data
+PAGENAME=page-$data.php
+touch $PAGENAME
+echo "<?php /* Template Name: ${data^} */ ?>" >> $PAGENAME

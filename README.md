@@ -2,6 +2,6 @@
 
 Website of rewice.com. Implementation with Wordpress, PHP, Gulp, SCSS.
 
-###Testing Area:
+### Testing Area:
 
 http://rewice.narcissundtaurus.com

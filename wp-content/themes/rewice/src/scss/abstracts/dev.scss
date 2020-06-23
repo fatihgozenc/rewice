@@ -1,0 +1,39 @@
+$defaultColor: rgb(0, 255, 170);
+
+.dev {
+	background: #333333d8;
+	border-radius: 6px;
+	color: $defaultColor;
+	margin: 8px;
+	width: auto;
+	height: auto;
+	position: fixed;
+	overflow-y: scroll;
+  overflow-x: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  top: 0;
+	font-family: 'SF Mono' !important;
+	font-size: 12px !important;
+	white-space: pre-wrap;
+  z-index: 100;
+  &::-webkit-scrollbar {
+		position: absolute;
+		width: 3px;
+	}
+
+  &::-webkit-scrollbar-track {
+    background: transparentize($defaultColor, .7);
+	}
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: .5rem;
+		background: $defaultColor;
+	}
+  > * {
+    font-family: 'SF Mono' !important;
+    font-size: 12px !important;
+    margin: 0;
+    padding: 0;
+  }
+}

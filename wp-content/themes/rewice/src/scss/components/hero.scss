@@ -1,0 +1,193 @@
+.hero{
+	position: relative;
+	height: 660px;
+	background-size: 100%;
+	background-position: bottom;
+	z-index: 0;
+
+	@include md {
+		height: 100vh;
+	}
+
+	@include xl {
+		background-size: 53%;
+    background-position: bottom right;
+	}
+
+	&.leistungen {
+		&.dark {
+			background-size: cover;
+			background-position: center;
+		}
+	}
+
+	&.kontakt {
+		height: 150vh;
+		background-size: 40%;
+		background-position: 100% 13%;
+		@include md {
+			height: 95vh;
+		}
+		@include xl {
+			background-size: 30%;
+			background-position: 100% 65%;
+		}
+		&.dark {
+			background-size: cover;
+		}
+	}
+
+	&__dark {
+		height: 100vh;
+		background-size: 250%;
+		background-position: top;
+		background-repeat: no-repeat;
+		width: 100%;
+		z-index: -1;
+		@include md {
+			background-size: 200%;
+		}
+		@include xl {
+			background-size: contain;
+		}
+		&__layer{
+			background-size: 180%;
+			width: 100%;
+			min-height: 25%;
+			position: absolute;
+			@include md {
+				background-size: 150%;
+			}
+			@include xl {
+				background-size: contain;
+			}
+			&--bg {
+				top: 0;
+				z-index: -5;
+				height: 100%;
+			}
+			&--one{
+				z-index: -4;
+				top: 5% !important;
+				height: 80%;
+				@include xl {
+					top: 15% !important;
+				}
+			}
+			&--two{
+				z-index: -3;
+				top: initial !important;
+				height: 90%;
+				bottom: -10vh;
+				@include xl {
+					bottom: -25vh;
+				}
+			}
+			&--three{
+				z-index: -2;
+				top: initial !important;
+				height: 50%;
+				bottom: -4vh;
+				background-size: 350%;
+
+				@include xl {
+					background-size: 100%;
+					bottom: -40vh;
+				}
+			}
+		}
+	}
+	&__image{
+		height: 50vh;
+		position: absolute;
+		width: 100%;
+		top: 0;
+		left: 0;
+		z-index: -1;
+
+		@include xl {
+			height: 100vh;
+			background-size: contain;
+			background-position: left;
+		}
+	}
+	&__content{
+		// padding: 5%;
+		&--scroller{
+			align-items: center;
+			display: flex;
+			position: absolute;
+			top: 80%;
+			left: 50%;
+			transform: rotate(-90deg);
+			transform-origin: left;
+			text-transform: uppercase;
+			letter-spacing: 3px;
+			font-size: .75em;
+			text-align: left;
+			font-weight: 800;
+			transition: .45s letter-spacing cubic-bezier(0.19, 1, 0.22, 1);
+			&::before{
+				// content: '▽';
+				content: '◁';
+				font-size: 18px;
+				position: absolute;
+				left: -22px;
+				color: $copper;
+				transform: translateX(0);
+				transition: .45s all cubic-bezier(0.19, 1, 0.22, 1);
+			}
+			&:hover {
+				transition: .45s letter-spacing cubic-bezier(0.19, 1, 0.22, 1);
+				letter-spacing: 7px;
+
+				&::before{
+					transition: .45s all cubic-bezier(0.19, 1, 0.22, 1);
+					transform: translateX(-20%);
+				}
+			}
+			
+		}
+		&--main{
+			padding: 20vh 5%;
+			@include xl {
+				padding: 30vh 10%;
+				width: 50%;
+			}
+			&.leistungen {
+				width: 100%;
+				padding: 20vh 5% 0 5%;
+				@include md {
+					padding: 30vh 60% 0 10%;
+				}
+				h3 {
+					@include title__iii;
+					margin: 3rem 0 1rem 0;
+				}
+			}
+		}
+		&--right{
+			text-align: right;
+			@include md {
+				
+				margin-left: auto;
+				width: 40%;
+			}
+		}
+		&.dark{
+			position: absolute;
+			top: 0;
+		}
+		h2{
+			text-transform: uppercase;
+			font-size: 2em;
+			line-height: 1.2;
+			margin-bottom: .5rem;
+		}
+		strong{
+			display: block;
+			color: $copper;
+		}
+	}
+	
+}

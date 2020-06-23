@@ -1,0 +1,97 @@
+$cardItemHeight: 40px;
+
+.cards {
+	align-content: center;
+	&.dark {
+		order: 1;
+	}
+	@include md {
+		display: flex;
+		flex-wrap: wrap;
+		> * {
+			flex: 0 50%;
+		}
+	}
+	@include xl {
+		> * {
+			flex: 0 33.33%;
+		}
+	}
+	&__item {
+		padding: 1rem 0;
+		img {
+			height: 60px;
+		}
+		@include md {
+			text-align: right;
+		}
+		&--title{
+			padding: .5rem 0;
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 500;
+			color: $copper;
+			@include xl {
+				font-size: 14px;
+			}
+		}
+		&--content{
+			p {
+				font-weight: 500;
+			}
+		}
+		&--button {
+			background: none;
+			border: none;
+			color: $copper;
+			transform: scaleX(2);
+			margin-top: $cardItemHeight*2;
+			font-size: 10px;
+			transition: .55s all cubic-bezier(0.39, 0.575, 0.565, 1);
+		}
+	}
+	
+	&.leistungen {
+		@include xl {
+			> * {
+				flex: 0 25%;
+			}
+		}
+		.cards__item{
+			position: relative;
+			margin: 0 0 $cardItemHeight*2 0;
+			@include md {
+				text-align: left;
+				margin: $cardItemHeight*2 0;
+			}
+			&--content{
+				width: 90%;
+				position: absolute;
+				z-index: -1;
+				height: $cardItemHeight*1.6;
+				overflow: hidden;
+				transition: .35s all cubic-bezier(.53,.02,.36,.83);
+				@include huge {
+					width: 80%;
+				}
+			}
+		}
+	}
+}
+
+.buttonToggled{
+	transition: .45s all cubic-bezier(.53,.02,.36,.83);
+	// margin-top: $cardItemHeight*3.5 !important;
+	transform: scaleX(2) translateY($cardItemHeight*2.5) rotateX(180deg);
+}
+
+.contentOpened {
+	transition: .45s all cubic-bezier(.53,.02,.36,.83);
+	height: $cardItemHeight*4.4 !important;
+	@include xl {
+		height: $cardItemHeight*3.3 !important;
+	}
+	@include xl {
+		height: $cardItemHeight*4 !important;
+	}
+}

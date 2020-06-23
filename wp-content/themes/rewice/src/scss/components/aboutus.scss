@@ -1,0 +1,9 @@
+.aboutus {
+	padding: 1rem 0 1rem 1rem;
+	h2 {
+		@include title__iii;
+	}
+	&.dark {
+		order: 2;
+	}
+}

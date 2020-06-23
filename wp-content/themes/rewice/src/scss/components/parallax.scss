@@ -1,0 +1,60 @@
+@mixin parallaxStyle($parallaxSize, $forRatio) {
+	height: $parallaxSize / 1.6;
+	width: $parallaxSize;
+
+	z-index: -1;
+	// margin-left: -($parallaxSize / 10);
+	left: -($parallaxSize / $forRatio);
+	img {
+		max-width: initial;
+		top: -($parallaxSize / 2.5) !important;
+		width: $parallaxSize - 90;
+		left: $parallaxSize / 9;
+		// transform: scale(.79);
+	}
+	&__circle{
+		height: $parallaxSize;
+		width: $parallaxSize;
+
+		&--item{
+			border-radius: 60vw;
+			position: absolute;
+		&:first-child{
+			height:$parallaxSize;
+			width:$parallaxSize;
+			background-color: rgb(226, 226, 226);
+			opacity: .3;
+			mix-blend-mode: multiply;
+		}
+		&:last-child{
+			height:($parallaxSize) - ($parallaxSize / 6);
+			width:($parallaxSize) - ($parallaxSize / 6);
+			background-color: #fff;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			}
+		}
+	}
+}
+
+.parallax {
+	position: relative;
+	> * {
+		position: absolute;
+	}
+	height: 300px;
+	@include parallaxStyle(280px, 5);
+	@include md {
+		@include parallaxStyle(480px, 5);
+	}
+	@include lg {
+		@include parallaxStyle(700px, 2.65);
+	}
+	@include xxl {
+		@include parallaxStyle(1000px, 3);
+	}
+	@include xxl {
+		@include parallaxStyle(1100px, 2.65);
+	}
+}

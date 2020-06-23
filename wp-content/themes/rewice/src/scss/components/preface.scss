@@ -1,0 +1,35 @@
+.preface {
+	@include md {
+		display: flex;
+		flex-wrap: wrap;
+		& > :nth-child(1){
+			flex: 35%;
+		}
+		& > :nth-child(2){
+			flex: 65%;
+		}
+		& > :nth-child(3){
+			flex: 50%;
+		}
+		& > :nth-child(4){
+			flex: 50%;
+		}
+	}
+	&.dark{
+		& > :nth-child(1){
+			display: none;
+		}
+		@include md {
+			& > :nth-child(2){
+				flex: 50%;
+			}
+			& > :nth-child(3){
+				flex: 50%
+			}
+			& > :nth-child(4){
+				flex: 100%;
+				padding: 6% 0;
+			}
+		}
+	}
+}

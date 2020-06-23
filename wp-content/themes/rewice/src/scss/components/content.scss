@@ -1,0 +1,61 @@
+.content {
+  &__leistungen{
+    > p {
+      padding:5% 0;
+    }
+    > h3 {
+      @include title__iii;
+    }
+  }
+  &__kontakt{
+    @include md {
+      display: flex;
+      flex-wrap: wrap;
+      > * {
+        flex: 1 0 50%;
+      }
+    }
+    @include xl {
+      > * {
+        flex: 33.33%;
+      }
+      width: 80%;
+    }
+    &.dark {
+      width: 100%;
+      @include md {
+        > * {
+          flex: 0 33.33%;
+
+        }
+      }
+      
+    }
+    &--item{
+      padding:0 0 1.6rem 0;
+      a, p{
+        display: block;
+        padding-left: 1rem;
+        position: relative;
+        // &:before{
+        //   content: '>';
+        //   height: 100%;
+        //   width: 2rem;
+        //   position: absolute;
+        //   left: 0;
+        // }
+      }
+      &:hover {
+        // svg{
+        //   fill: $copper;
+        // }
+      }
+      &-icon{
+        padding: .35rem 0;
+        display: flex;
+        align-items: center;
+        
+      }
+    }
+  }
+}

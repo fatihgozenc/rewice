@@ -1,0 +1,81 @@
+@import 'fonts';
+
+* {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-family: "Roboto";
+	font-weight: 300;
+	color: $blue;
+	font-size: .85em;
+	line-height: 1.6;
+
+	&::-webkit-scrollbar{
+		width: 5px;
+	}
+	&::-webkit-scrollbar-track{
+		background: #fff;
+	}
+	&::-webkit-scrollbar-thumb{
+		background: linear-gradient( to top, #fff,  $copper);
+		border-radius: 10px;
+	}
+	
+	svg {
+		fill: $blue;
+		transition: .35s fill ease;
+			&:hover{
+				fill: $copper;
+				transition: .35s fill ease;
+			}
+	}
+	&.dark{
+		background: $charcoal;
+		color: #eee;
+		&::-webkit-scrollbar-track{
+			background: transparent;
+		}
+		&::-webkit-scrollbar-thumb{
+			background: linear-gradient( to top, rgba($charcoal, .75),  $copper);
+		}
+		nav {
+			background: rgba($charcoal, .75);
+			@include md {
+				background: none;
+			}
+		}
+		svg{
+			fill:#eee;
+			&:hover{
+				fill: $copper;
+				transition: .35s fill ease;
+			}
+		}
+	}
+}
+
+.title__iii{
+	font-size: 18px;
+	color: $copper;
+	text-transform: uppercase;
+	font-weight: 500;
+	@include xl{
+		font-size: 22px;
+	}
+}
+.title__seo{
+	visibility: hidden;
+	position: absolute;
+}
+
+@mixin title__iii{
+	font-size: 18px;
+	color: $copper;
+	text-transform: uppercase;
+	font-weight: 500;
+	@include xl{
+		font-size: 22px;
+	}
+}

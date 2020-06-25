@@ -6,6 +6,7 @@
 	$theme_color = $content_acf['theme_color'];
 	$isLight = $theme_color == 'light' ? true : false;
 	$erster_block = $content_acf['erster_block'];
+	$zentrierter_block = $content_acf['zentrierter_block'];
 	$zweiter_block = $content_acf['zweiter_block'];
 	$angestellte_block = $content_acf['angestellte_block'];
 	$aboutus_block = $content_acf['aboutus_block'];
@@ -21,13 +22,16 @@
 			<?= $erster_block['inhalt'] ?>
 			<a href="<?= $erster_block['button']['url'] ?>" class="rewice__button"><?= $erster_block['button']['title'] ?></a>
 		</div>
+		<div class="hero__content hero__content--centered">
+			<?= $zentrierter_block['inhalt'] ?>
+			<a href="<?= $zentrierter_block['button']['url'] ?>" class="rewice__button"><?= $zentrierter_block['button']['title'] ?></a>
+		</div>
 	</section>
 <?php else: ?>
 	<section class="hero hero__dark lazyLoad" data-bg="<?= $HOME . "/dist/images/hero__image--dark-bg.jpg"?>">
 		<div data-depth="0.1" data-friction-y="0.8" class="hero__dark__layer hero__dark__layer--one lazyLoad bgImg" data-bg="<?= $HOME . "/dist/images/hero__image-dark-1.png"?>"></div>
 		<div data-depth="0.3" data-friction-y="0.8" class="hero__dark__layer hero__dark__layer--two lazyLoad bgImg" data-bg="<?= $HOME . "/dist/images/hero__image-dark-2.png"?>"></div>
 		<div data-depth="0.5" data-friction-y="0.7" class="hero__dark__layer hero__dark__layer--three lazyLoad bgImg" data-bg="<?= $HOME . "/dist/images/hero__image-dark-3.png"?>"></div>
-		
 	</section>
 	<div class="hero__content dark hero__content--main">
 		<?= $erster_block['inhalt'] ?>
@@ -35,6 +39,7 @@
 	</div>
 	<a href="#content" title="scroller" class="hero__content--scroller"><?= ifLangDe('Scrollen', 'Scroll') ?></a>
 <?php endif; ?>
+
 <main id="content">
 	<div class="hero__content hero__content--right">
 		<?= $zweiter_block['inhalt'] ?>
@@ -52,11 +57,12 @@
 		</section>
 		<section class="cards <?= $theme_color ?>">
 			<?php foreach($zweiter_block['icons'] as $item): ?>
-				<div class="cards__item">
-					<img src="<?= $item['icon'] ?>" alt="<?= $item['info']['titel'] ?>">
+				<a href="/leistungen" class="cards__item">
+					<img class="cards__item--icon" src="<?= $item['icon'] ?>" alt="<?= $item['info']['titel'] ?>">
 					<h3 class="cards__item--title"><?= $item['info']['titel'] ?></h3>
 					<div class="cards__item--content"><?= $item['info']['inhalt'] ?></div>
-				</div>
+					<button class="rewice__button--action"><img height="32" src="<?= $HOME . "/dist/images/action.svg"?>" alt="Action Icon"></button>
+				</a>
 			<?php endforeach; ?>
 		</section>
 		<section class="people <?= $theme_color ?>">

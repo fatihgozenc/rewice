@@ -19,11 +19,14 @@ $cardItemHeight: 40px;
 	}
 	&__item {
 		padding: 1rem 0;
-		img {
+		display: block;
+		&--icon {
 			height: 60px;
 		}
 		@include md {
+			display: initial;
 			text-align: right;
+			padding: 1rem 0 1rem 1rem;
 		}
 		&--title{
 			padding: .5rem 0;
@@ -31,13 +34,28 @@ $cardItemHeight: 40px;
 			text-transform: uppercase;
 			font-weight: 500;
 			color: $copper;
+			@include md {
+				min-height: 60px;
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+			}
 			@include xl {
 				font-size: 14px;
 			}
 		}
 		&--content{
+			padding: 1rem 0;
 			p {
 				font-weight: 500;
+				overflow: hidden;
+				text-overflow: ellipsis;
+				display: -webkit-box;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+			@include md {
+				padding: 0 0 1rem 0;
 			}
 		}
 		&--button {

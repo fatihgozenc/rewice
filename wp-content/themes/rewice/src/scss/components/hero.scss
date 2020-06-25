@@ -1,12 +1,14 @@
 .hero{
 	position: relative;
-	height: 660px;
+	min-height: 660px;
 	background-size: 100%;
-	background-position: bottom;
+	background-position: 50% 45%;
 	z-index: 0;
 
 	@include md {
 		height: 100vh;
+		background-size: 70%;
+		background-position: 120% 45%;
 	}
 
 	@include xl {
@@ -148,12 +150,24 @@
 			}
 			
 		}
+		&--centered{
+			margin: 0 auto;
+			padding: 10% 5%;
+			@include lg {
+				width: 80%;
+				padding: 10%;
+			}
+			@include huge {
+				width: 50%;
+			}
+		}
 		&--main{
 			padding: 20vh 5%;
 			@include xl {
-				padding: 30vh 10%;
+				padding: 30vh 10% 0 10%;
 				width: 50%;
 			}
+
 			&.leistungen {
 				width: 100%;
 				padding: 20vh 5% 0 5%;

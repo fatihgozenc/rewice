@@ -14,6 +14,9 @@
 		<div class="hero__content hero__content--main">
 			<?= $content ?>
 		</div>
+		<div class="hero__content hero__content--main">
+			<?= $content ?>
+		</div>
 	</section>
 <?php else: ?>
 	<section class="hero hero__dark lazyLoad" data-bg="<?= $HOME . "/dist/images/hero__image--dark-bg.jpg"?>">

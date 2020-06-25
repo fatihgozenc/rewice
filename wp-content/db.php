@@ -1,0 +1,1 @@
+/Users/fatih/sites/rewice/wp-content/plugins/query-monitor/wp-content/db.php

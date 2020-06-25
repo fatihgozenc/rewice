@@ -4,6 +4,7 @@
   $theme_color = $content_acf['theme_color'];
   $isLight = $theme_color == 'light' ? true : false;
   $erster_block = $content_acf['erster_block'];
+  $quotes = $content_acf['zitate'];
   $angestellte_block = $content_acf['angestellte_block'];
   $hero = get_the_post_thumbnail_url();
 ?>
@@ -30,8 +31,17 @@
       <div class="content__kontakt--item-icon">
       <?php Icons('address'); ?><p><?= $item['address'] ?></p>
       </div>
-    </div>
-  <?php endforeach; ?>
+		</div>
+		
+	<?php endforeach; ?>
+	<section class="aboutus kontakt">
+		<?php foreach($quotes as $quote):?>
+			<div class="aboutus__quote">
+				<div class="aboutus__quote--content"><?= $quote['zitat']; ?></div>
+				<div class="aboutus__quote--person"><?= $quote['person']; ?></div>
+			</div>
+		<?php endforeach; ?>
+	</section>
 </main>
 </section>
 

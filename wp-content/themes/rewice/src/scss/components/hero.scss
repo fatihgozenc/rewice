@@ -24,15 +24,16 @@
 	}
 
 	&.kontakt {
-		height: 150vh;
+		min-height: 150vh;
 		background-size: 40%;
 		background-position: 100% 13%;
+		height: auto;
 		@include md {
-			height: 95vh;
+			min-height: 105vh;
 		}
 		@include xl {
 			background-size: 30%;
-			background-position: 100% 65%;
+			background-position: 100% 33%;
 		}
 		&.dark {
 			background-size: cover;
@@ -172,6 +173,12 @@
 				width: 100%;
 				padding: 20vh 5% 0 5%;
 				@include md {
+					padding: 30vh 20% 0 10%;
+				}
+				@include xl {
+					padding: 30vh 40% 0 10%;
+				}
+				@include xxl {
 					padding: 30vh 60% 0 10%;
 				}
 				h3 {

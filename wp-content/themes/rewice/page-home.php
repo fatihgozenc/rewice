@@ -11,7 +11,6 @@
 	$angestellte_block = $content_acf['angestellte_block'];
 	$aboutus_block = $content_acf['aboutus_block'];
 	$quotes = $aboutus_block['zitate'];
-	// dev($isLight, 50, 50);
 ?>
 
 <h1 class="title__seo"><?= get_the_title(); ?></h1>

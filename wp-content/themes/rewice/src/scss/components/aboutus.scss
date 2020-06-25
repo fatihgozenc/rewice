@@ -6,6 +6,26 @@
 	&.dark {
 		order: 2;
 	}
+	&.leistungen {
+		@include xl {
+			flex: 50%;
+		}
+	}
+
+	&.kontakt{
+		flex: 100%;
+		padding: initial;
+		@include md {
+			display: flex;
+			flex-wrap: wrap;
+			> * {
+				flex: 50%;
+			}
+		}
+		@include xl {
+			padding: 3rem 0;
+		}
+	}
 
 	&__quote {
 		padding: 1rem 0;

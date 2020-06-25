@@ -54,6 +54,10 @@ $cardItemHeight: 40px;
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
 			}
+			&.leistungen {
+				
+				
+			}
 			@include md {
 				padding: 0 0 1rem 0;
 			}
@@ -71,24 +75,32 @@ $cardItemHeight: 40px;
 	
 	&.leistungen {
 		@include xl {
+			flex: 50%;
 			> * {
-				flex: 0 25%;
+				flex: 0 50%;
 			}
 		}
 		.cards__item{
 			position: relative;
-			margin: 0 0 $cardItemHeight*2 0;
+			// margin: 0 0 $cardItemHeight*2 0;
 			@include md {
 				text-align: left;
-				margin: $cardItemHeight*2 0;
+				// margin: $cardItemHeight*2 0;
 			}
 			&--content{
 				width: 90%;
-				position: absolute;
+				// position: absolute;
 				z-index: -1;
-				height: $cardItemHeight*1.6;
+				// height: $cardItemHeight*1.6;
 				overflow: hidden;
 				transition: .35s all cubic-bezier(.53,.02,.36,.83);
+				p{
+					overflow: initial;
+					text-overflow: initial;
+					display: initial;
+					-webkit-line-clamp: initial;
+					-webkit-box-orient: initial;
+				}
 				@include huge {
 					width: 80%;
 				}

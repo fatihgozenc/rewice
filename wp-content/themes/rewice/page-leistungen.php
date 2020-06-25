@@ -5,6 +5,7 @@
   $isLight = $theme_color == 'light' ? true : false;
 	$erster_block = $content_acf['erster_block'];
   $zweiter_block = $content_acf['zweiter_block'];
+  $quotes = $zweiter_block['zitate'];
   $hero = get_the_post_thumbnail_url();
 ?>
 
@@ -20,16 +21,25 @@
 
 <main id="content" class="content__leistungen">
 <?= $zweiter_block['zweiter_inhalt'] ?>
-  <section class="cards <?= $theme_color ?> leistungen">
-    <?php foreach($zweiter_block['leistungen_block'] as $item): ?>
-      <div class="cards__item">
-        <img src="<?= $item['icon'] ?>" alt="<?= $item['info']['titel'] ?>">
-        <h4 class="cards__item--title"><?= $item['info']['titel'] ?></h4>
-        <div class="cards__item--content"><?= $item['info']['inhalt'] ?></div>
-        <button class="cards__item--button" title="<?= $item['info']['titel'] ?> Toggle">v</button>
-      </div>
-    <?php endforeach; ?>
-  </section>
+	<section class="cards <?= $theme_color ?> leistungen">
+		<?php foreach($zweiter_block['leistungen_block'] as $item): ?>
+			<div class="cards__item">
+				<img src="<?= $item['icon'] ?>" alt="<?= $item['info']['titel'] ?>">
+				<h4 class="cards__item--title"><?= $item['info']['titel'] ?></h4>
+				<div class="cards__item--content"><?= $item['info']['inhalt'] ?></div>
+				<!-- <button class="cards__item--button" title="<?php #echo $item['info']['titel'] ?> Toggle">v</button> -->
+			</div>
+		<?php endforeach; ?>
+	</section>
+	<section class="aboutus <?= $theme_color ?> leistungen">
+		<?php foreach($quotes as $quote): ?>
+			<div class="aboutus__quote">
+				<div class="aboutus__quote--content"><?= $quote['zitat']; ?></div>
+				<div class="aboutus__quote--person"><?= $quote['person']; ?></div>
+			</div>
+		<?php endforeach; ?>
+	</section>
+	
 </main>
 
 <?php get_footer();?>

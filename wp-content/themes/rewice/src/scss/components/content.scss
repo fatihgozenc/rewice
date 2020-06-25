@@ -5,7 +5,11 @@
     }
     > h3 {
       @include title__iii;
-    }
+		}
+		@include xl {
+			display: flex;
+			flex-wrap: wrap;
+		}
   }
   &__kontakt{
     @include md {

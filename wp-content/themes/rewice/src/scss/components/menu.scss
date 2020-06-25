@@ -32,6 +32,12 @@
 	&__logo{
 		height: 35px;
 		@include xl {
+			height: 40px;
+		}
+		@include xxl {
+			height: 50px;
+		}
+		@include huge {
 			height: 60px;
 		}
 	}

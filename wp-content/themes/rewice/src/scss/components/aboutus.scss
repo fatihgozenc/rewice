@@ -6,4 +6,16 @@
 	&.dark {
 		order: 2;
 	}
+
+	&__quote {
+		padding: 1rem 0;
+
+		&--person {
+			font-size: 12px;
+			text-transform: uppercase;
+			font-weight: 500;
+			color: $copper;
+			padding: 6px 0;
+		}
+	}
 }

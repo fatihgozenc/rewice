@@ -10,6 +10,7 @@
 	$zweiter_block = $content_acf['zweiter_block'];
 	$angestellte_block = $content_acf['angestellte_block'];
 	$aboutus_block = $content_acf['aboutus_block'];
+	$quotes = $aboutus_block['zitate'];
 	// dev($isLight, 50, 50);
 ?>
 
@@ -79,6 +80,12 @@
 		<section class="aboutus <?= $theme_color ?>">
 			<div class="aboutus--content"><?= $aboutus_block['inhalt'] ?></div>
 			<a href="<?= $aboutus_block['button']['url'] ?>" class="rewice__button"><?= $aboutus_block['button']['title'] ?></a>
+			<?php foreach($quotes as $i => $quote): ?>
+				<div class="aboutus__quote">
+					<div class="aboutus__quote--content"><?= $quote['zitat']; ?></div>
+					<div class="aboutus__quote--person"><?= $quote['person']; ?></div>
+				</div>
+			<?php endforeach; ?>
 		</section>
 	</div>
 </main>

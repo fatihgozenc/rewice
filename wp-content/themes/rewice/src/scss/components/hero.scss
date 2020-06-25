@@ -155,9 +155,9 @@
 			padding: 10% 5%;
 			@include lg {
 				width: 80%;
-				padding: 10%;
+				padding: 12% 10%;
 			}
-			@include huge {
+			@include xxl {
 				width: 50%;
 			}
 		}

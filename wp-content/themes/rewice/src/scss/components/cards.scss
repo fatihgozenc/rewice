@@ -75,9 +75,9 @@ $cardItemHeight: 40px;
 	
 	&.leistungen {
 		@include xl {
-			flex: 50%;
+			// flex: 50%;
 			> * {
-				flex: 0 50%;
+				flex: 0 33.33%;
 			}
 		}
 		.cards__item{

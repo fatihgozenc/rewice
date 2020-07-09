@@ -7,8 +7,11 @@
 		order: 2;
 	}
 	&.leistungen {
+		flex: 1;
 		@include xl {
-			flex: 50%;
+			flex: 0 50%;
+			// width: 50%;
+			margin: 0 auto;
 		}
 	}
 
@@ -19,7 +22,12 @@
 			display: flex;
 			flex-wrap: wrap;
 			> * {
-				flex: 50%;
+				flex: 0 50%;
+			}
+		}
+		@include xl {
+			> * {
+				flex: 0 50%;
 			}
 		}
 		@include xl {
@@ -29,6 +37,8 @@
 
 	&__quote {
 		padding: 1rem 0;
+		width: 100%;
+		// padding: 0 10%;
 
 		&--person {
 			font-size: 12px;

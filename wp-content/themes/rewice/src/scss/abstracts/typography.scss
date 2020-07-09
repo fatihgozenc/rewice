@@ -12,6 +12,10 @@ body {
 	font-size: .85em;
 	line-height: 1.6;
 
+	@include xl {
+		font-size: initial;
+	}
+
 	&::-webkit-scrollbar{
 		width: 5px;
 	}
@@ -59,7 +63,7 @@ body {
 .title__iii{
 	font-size: 18px;
 	color: $copper;
-	text-transform: uppercase;
+	// text-transform: uppercase;
 	font-weight: 500;
 	@include xl{
 		font-size: 22px;

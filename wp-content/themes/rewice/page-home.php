@@ -79,12 +79,7 @@
 		<section class="aboutus <?= $theme_color ?>">
 			<div class="aboutus--content"><?= $aboutus_block['inhalt'] ?></div>
 			<a href="<?= $aboutus_block['button']['url'] ?>" class="rewice__button"><?= $aboutus_block['button']['title'] ?></a>
-			<?php foreach($quotes as $i => $quote): ?>
-				<div class="aboutus__quote">
-					<div class="aboutus__quote--content"><?= $quote['zitat']; ?></div>
-					<div class="aboutus__quote--person"><?= $quote['person']; ?></div>
-				</div>
-			<?php endforeach; ?>
+			<?php QuoteSlider($quotes); ?>
 		</section>
 	</div>
 </main>

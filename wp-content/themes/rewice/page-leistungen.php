@@ -32,12 +32,7 @@
 		<?php endforeach; ?>
 	</section>
 	<section class="aboutus <?= $theme_color ?> leistungen">
-		<?php foreach($quotes as $quote): ?>
-			<div class="aboutus__quote">
-				<div class="aboutus__quote--content"><?= $quote['zitat']; ?></div>
-				<div class="aboutus__quote--person"><?= $quote['person']; ?></div>
-			</div>
-		<?php endforeach; ?>
+		<?php QuoteSlider($quotes); ?>
 	</section>
 	
 </main>

@@ -1,4 +1,17 @@
-footer {
+.footer {
 	margin: 0 5%;
 	border-top: 2px solid $copper;
+	display: flex;
+	justify-content: space-between;
+	padding: 24px;
+
+	&__block{
+		&__routers{
+			padding-bottom: 1rem;
+		}
+		&__contact{
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
 }

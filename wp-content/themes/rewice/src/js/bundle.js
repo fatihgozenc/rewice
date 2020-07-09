@@ -1,8 +1,8 @@
-import {homeParallax, homeDarkParallax} from './parallax';
+import { homeParallax, homeDarkParallax } from './parallax';
 import lazyLoad from './lazyLoad';
+import sliders from './sliders';
 import menuToggler from './menuToggler';
 import menuBrighten from './menuBrighten';
-import cardOpen from './cardOpen';
 
 const pageUrl = window.location.pathname;
 
@@ -13,13 +13,14 @@ const isKontakt = (pageUrl == '/kontakt/' || pageUrl == '/en/contact/') ? true :
 // GENERAL INIT
 
 lazyLoad();
+sliders();
 menuToggler();
 menuBrighten();
 
 // PAGE_SPESIFIC INIT
 
-if(isHome){
-  document.body.classList.contains('dark') ? homeDarkParallax() : homeParallax();
-} else if(isLeistungen){
-  cardOpen();
+if (isHome) {
+	document.body.classList.contains('dark') ? homeDarkParallax() : homeParallax();
 }
+
+console.log

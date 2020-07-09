@@ -1,4 +1,5 @@
 <?php
+	global $HOME;
 	$logoWhite = get_field('logo_weiss', 'options');
 	$logoColor = get_field('logo_farbe', 'options');
 	$kontaktMail = get_field('kontaktmail', 'options');
@@ -9,10 +10,11 @@
 	$activeLang = pll_current_language();;
 	$langEN = $langs['en'];
 	$langDE = $langs['de'];
+	$contact = get_field('kontaktinfo', 'option');
 	$header_menu = get_navigation('header-menu');
 ?>
 <!DOCTYPE html>
-<html <?php language_attributes(); ?> >
+<html attr="<?= $contact['e-mail'] ?>" <?php language_attributes(); ?> >
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,9 +58,8 @@
 			// }
 		</script>
 		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
-
 		<?php wp_head(); ?>
 	</head>
 	<body data-fade-in="true" class="<?= ifLangDe('light', 'dark'); ?>" >
-		<?php Navigation($header_menu, $langDE['url'], $langEN['url']); ?>
+		<?php Navigation($header_menu, $langDE['url'], $langEN['url'], $contact['telefon'], $contact['e-mail']); ?>
 		<?php #$urls = explode('/', $_SERVER['REQUEST_URI']); $addEnUrl = $urls[1] == 'en' ? 'en/' : null; ?>

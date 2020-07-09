@@ -19,8 +19,12 @@
   <main id="content" class="content__kontakt <?= $theme_color ?>">
   <?php foreach($angestellte_block as $item):?>
     <div class="content__kontakt--item">
-      <?php $name = explode(" ", $item['name']);?>
-      <h3><?= $name[0] ?> <strong><?= $name[1] ?></strong></h3>
+			<?php $name = explode(" ", $item['name']);
+			if(count($name) > 2):?>
+				<h3><?= $name[0] . ' ' . $name[1]?> <strong><?= $name[2] ?></strong></h3>
+			<?php else:?>
+				<h3><?= $name[0]?> <strong><?= $name[1] ?></strong></h3>
+			<?php endif;?>
       <h4><?= $item['jobtitel'] ?></h4>
       <div class="content__kontakt--item-icon">
         <?php Icons('tel') ?><a href="tel:<?= $item['tel'] ?>"><?= $item['tel'] ?></a>
@@ -35,12 +39,7 @@
 		
 	<?php endforeach; ?>
 	<section class="aboutus kontakt">
-		<?php foreach($quotes as $quote):?>
-			<div class="aboutus__quote">
-				<div class="aboutus__quote--content"><?= $quote['zitat']; ?></div>
-				<div class="aboutus__quote--person"><?= $quote['person']; ?></div>
-			</div>
-		<?php endforeach; ?>
+		<?php QuoteSlider($quotes); ?>
 	</section>
 </main>
 </section>

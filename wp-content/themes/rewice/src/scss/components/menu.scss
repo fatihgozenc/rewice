@@ -46,6 +46,7 @@
 	}
 }
 
+
 .nav{
 	text-align: center;
 	align-items: center;
@@ -60,19 +61,25 @@
 	width: 100%;
 	background: rgba(255,255,255,.755);
 	backdrop-filter: blur(4px);
-
 	
 	@include md {
-		position: initial;
+		position: relative;
+		top: auto;
 		top: initial;
+		left: auto;
 		left: initial;
+		width: auto;
 		width: initial;
+		background: none;
 		background: initial;
+		
+		backdrop-filter: auto;
 		backdrop-filter: initial;
+		justify-content: flex-end;
 
 		opacity: 1;
 		transform: translateY(0);
-		flex: initial;
+		flex: 1;
 		display: flex;
 		> * {
 			display: flex;
@@ -162,6 +169,9 @@
 	display: block;
 }
 
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.menu{background-color: rgba(255,255,255,.85)}
+}
 
 .menuWhite{
 	transition: .35s all;

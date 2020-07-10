@@ -12,8 +12,7 @@
 	$langDE = $langs['de'];
 	$contact = get_field('kontaktinfo', 'option');
 	$header_menu = get_navigation('header-menu');
-?>
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html attr="<?= $contact['e-mail'] ?>" <?php language_attributes(); ?> >
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">

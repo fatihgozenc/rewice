@@ -3,6 +3,7 @@
 }
 
 main {
+	display: block;
 	padding: 20% 5% 5% 5%;
 	@include md {
 		padding: 5% 10% 5% 10%;

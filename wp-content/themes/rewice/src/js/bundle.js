@@ -20,7 +20,7 @@ menuBrighten();
 // PAGE_SPESIFIC INIT
 
 if (isHome) {
-	document.body.classList.contains('dark') ? homeDarkParallax() : homeParallax();
+	homeParallax();
 }
 
 console.log

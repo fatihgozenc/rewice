@@ -32,7 +32,7 @@
 			min-height: 105vh;
 		}
 		@include xl {
-			background-size: 30%;
+			background-size: 39.5vw;
 			background-position: 100% 33%;
 		}
 		&.dark {
@@ -192,10 +192,6 @@
 				margin-left: auto;
 				width: 40%;
 			}
-		}
-		&.dark{
-			position: absolute;
-			top: 0;
 		}
 		h2{
 			text-transform: uppercase;

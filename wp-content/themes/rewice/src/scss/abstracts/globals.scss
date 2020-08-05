@@ -10,3 +10,28 @@ main {
 	}
 }
 
+.item-active{
+	color: $copper;
+}
+
+.menu-item-active{
+	position: relative;
+
+	&:before{
+		content: '';
+		position: absolute;
+		bottom: 8px;
+		height: 1px;
+		background: $copper;
+		width: 60px;
+		left: 50%;
+		transform: translateX(-50%);
+		@include md {
+			width: 70%;
+		}
+	}
+}
+
+.d-none{
+	display: none;
+}

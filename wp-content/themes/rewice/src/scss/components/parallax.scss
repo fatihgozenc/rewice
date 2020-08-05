@@ -44,17 +44,14 @@
 		position: absolute;
 	}
 	height: 300px;
-	@include parallaxStyle(280px, 5);
+	@include parallaxStyle(280px, 7);
 	@include md {
 		@include parallaxStyle(480px, 5);
 	}
 	@include lg {
-		@include parallaxStyle(700px, 2.65);
+		@include parallaxStyle(700px, 4);
 	}
 	@include xxl {
-		@include parallaxStyle(1000px, 3);
-	}
-	@include xxl {
-		@include parallaxStyle(1100px, 2.65);
+		@include parallaxStyle(900px, 3);
 	}
 }

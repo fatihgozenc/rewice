@@ -78,6 +78,7 @@ $cardItemHeight: 40px;
 			// flex: 50%;
 			> * {
 				flex: 0 33.33%;
+				padding: initial;
 			}
 		}
 		.cards__item{

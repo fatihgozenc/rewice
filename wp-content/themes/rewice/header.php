@@ -59,6 +59,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/simple-parallax-js@5.2.0/dist/simpleParallax.min.js"></script>
 		<?php wp_head(); ?>
 	</head>
-	<body data-fade-in="true" class="<?= ifLangDe('light', 'dark'); ?>" >
-		<?php Navigation($header_menu, $langDE['url'], $langEN['url'], $contact['telefon'], $contact['e-mail']); ?>
-		<?php #$urls = explode('/', $_SERVER['REQUEST_URI']); $addEnUrl = $urls[1] == 'en' ? 'en/' : null; ?>
+	<body data-fade-in="true" >
+		<?php Navigation(
+			$header_menu, 
+			$langDE['url'], 
+			$langEN['url'], 
+			$contact['telefon'], 
+			$contact['e-mail'], 
+			$_SERVER['REQUEST_URI']
+		); ?>

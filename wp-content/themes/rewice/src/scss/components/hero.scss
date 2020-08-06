@@ -16,6 +16,19 @@
     background-position: bottom right;
 	}
 
+	&-en{
+		background-position: 50% 40%;
+		@include md {
+			background-position: 50% 57%;
+			background-size: contain;
+		}
+		@include lg {
+			background-size: cover;
+			background-position: center;
+		}
+	
+	}
+
 	&.leistungen {
 		&.dark {
 			background-size: cover;
@@ -114,8 +127,11 @@
 			background-position: left;
 		}
 	}
+
+
 	&__content{
 		// padding: 5%;
+	
 		&--scroller{
 			align-items: center;
 			display: flex;
@@ -160,12 +176,16 @@
 				padding: 12% 10%;
 			}
 		}
+
+
 		&--main{
 			padding: 20vh 5%;
 			@include lg {
 				padding: 30vh 10% 0 10%;
 				width: 50%;
 			}
+
+			
 
 			&.leistungen {
 				width: 100%;
@@ -183,6 +203,12 @@
 					@include title__iii;
 					margin: 3rem 0 1rem 0;
 				}
+			}
+		}
+
+		&--en {
+			@include lg {
+				padding: 50vh 10% 0 10%;
 			}
 		}
 		&--right{

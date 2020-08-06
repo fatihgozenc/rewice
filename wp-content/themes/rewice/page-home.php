@@ -13,10 +13,10 @@
 
 <h1 class="title__seo"><?= get_the_title(); ?></h1>
 
-<section class="hero lazyLoad bgImg" data-bg=<?= get_the_post_thumbnail_url();?>>
+<section class="hero <?= ifLangDe('hero-de', 'hero-en') ?> lazyLoad bgImg" data-bg=<?= get_the_post_thumbnail_url();?>>
 	<?= ifLangDe(
 		'<div class="hero__image lazyLoad bgImg" data-bg="' . $HOME . '/dist/images/hero__seven--light.png"?>"></div>', null )?>
-	<div class="hero__content hero__content--main">
+	<div class="hero__content hero__content--main <?= ifLangDe('hero__content--de', 'hero__content--en') ?>">
 		<?= $erster_block['inhalt'] ?>
 		<a href="<?= $erster_block['button']['url'] ?>" class="rewice__button"><?= $erster_block['button']['title'] ?></a>
 	</div>

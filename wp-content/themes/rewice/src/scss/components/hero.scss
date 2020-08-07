@@ -4,7 +4,7 @@
 	background-size: 100%;
 	background-position: 50% 45%;
 	z-index: 0;
-
+	
 	@include md {
 		height: 100vh;
 		background-size: 70%;
@@ -14,6 +14,14 @@
 	@include xl {
 		background-size: 53%;
     background-position: bottom right;
+	}
+
+	&--singlepage{
+		height: auto;
+		padding-bottom: 10%;
+		@include xl {
+			background-position: 100% 10%;
+		}
 	}
 
 	&-en{
@@ -126,11 +134,17 @@
 			background-size: contain;
 			background-position: left;
 		}
+
+		&--singlepage{
+			height: 70vh;
+		}
 	}
 
 
 	&__content{
 		// padding: 5%;
+
+	
 	
 		&--scroller{
 			align-items: center;
@@ -173,7 +187,7 @@
 			@include lg {
 				width: 50%;
 				margin: 0 0 0 11%;
-				padding: 12% 10%;
+				padding: 7% 10%;
 			}
 		}
 
@@ -184,8 +198,6 @@
 				padding: 30vh 10% 0 10%;
 				width: 50%;
 			}
-
-			
 
 			&.leistungen {
 				width: 100%;
@@ -203,6 +215,19 @@
 					@include title__iii;
 					margin: 3rem 0 1rem 0;
 				}
+			}
+		}
+
+		&--single {
+			h1 {
+				font-size: 34px;
+			}
+			h2 {
+				font-size: 24px;
+			}
+			@include lg {
+				padding: 18vh 10% 0 10%;
+				width: 80%;
 			}
 		}
 
@@ -231,6 +256,21 @@
 		strong{
 			display: block;
 			color: $copper;
+		}
+		&--single {
+			h1 {
+				margin-bottom: 2rem;
+				font-weight: 400;
+				font-size: 34px;
+			}
+			h2 {
+				margin: 2rem 0 1rem 0;
+				font-weight: 400;
+				font-size: 20px;
+			}
+			@include lg {
+				width: 80%;
+			}
 		}
 	}
 	

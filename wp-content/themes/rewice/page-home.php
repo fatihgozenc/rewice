@@ -35,7 +35,7 @@
 		<section class="parallax">
 			<?= ifLangDe(
 				'<div class="parallax__wrapper">
-					<img data-depth="0.4" src=<?= ' . $HOME . '"/dist/images/figure.jpg"?> alt="Parallax Figure">
+					<img data-depth="0.4" src="' . $HOME . '/dist/images/figure.jpg" alt="Parallax Figure">
 					<div data-depth="0.3" class="parallax__circle">
 						<div class="parallax__circle--item"></div>
 						<div class="parallax__circle--item"></div>

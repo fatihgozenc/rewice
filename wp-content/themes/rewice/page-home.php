@@ -15,7 +15,7 @@
 
 <section class="hero <?= ifLangDe('hero-de', 'hero-en') ?> lazyLoad bgImg" data-bg=<?= get_the_post_thumbnail_url();?>>
 	<?= ifLangDe(
-		'<div class="hero__image lazyLoad bgImg" data-bg="' . $HOME . '/dist/images/hero__seven--light.png"?>"></div>', null )?>
+		'<div class="hero__image lazyLoad bgImg" data-bg="' . $HOME . '/dist/images/hero__seven--light.png"></div>', null )?>
 	<div class="hero__content hero__content--main <?= ifLangDe('hero__content--de', 'hero__content--en') ?>">
 		<?= $erster_block['inhalt'] ?>
 		<a href="<?= $erster_block['button']['url'] ?>" class="rewice__button"><?= $erster_block['button']['title'] ?></a>
@@ -33,7 +33,16 @@
 	</div>
 	<div class="preface">
 		<section class="parallax">
-			<?= ifLangDe(
+			<?php // echo ifLangDe(
+			//	'<div class="parallax__wrapper">
+			//		<img data-depth="0.4" src="' . $HOME . '/dist/images/figure.jpg" alt="Parallax Figure">
+			//		<div data-depth="0.3" class="parallax__circle">
+			//			<div class="parallax__circle--item"></div>
+			//			<div class="parallax__circle--item"></div>
+			//		</div>
+			//	</div>'
+			//, null) ?>
+			<?= (
 				'<div class="parallax__wrapper">
 					<img data-depth="0.4" src="' . $HOME . '/dist/images/figure.jpg" alt="Parallax Figure">
 					<div data-depth="0.3" class="parallax__circle">
@@ -41,7 +50,7 @@
 						<div class="parallax__circle--item"></div>
 					</div>
 				</div>'
-			, null) ?>
+			) ?>
 		</section>
 		<section class="cards">
 			<?php foreach($zweiter_block['icons'] as $item): ?>

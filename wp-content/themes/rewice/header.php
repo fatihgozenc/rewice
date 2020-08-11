@@ -13,7 +13,7 @@
 	$contact = get_field('kontaktinfo', 'option');
 	$header_menu = get_navigation('header-menu');
 ?><!DOCTYPE html>
-<html attr="<?= $contact['e-mail'] ?>" <?php language_attributes(); ?> >
+<html <?php language_attributes(); ?> >
 	<head>
 		<meta charset="<?php bloginfo('charset'); ?>">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -21,24 +21,6 @@
 		<title><?php #ifLangDe($metaTags['de']['titel'], $metaTags['en']['titel']) ?></title>
 		<meta name="description" content="<?php #ifLangDe($metaTags['de']['beschreibung'], $metaTags['en']['beschreibung']) ?>">
 		<meta name="keywords" content=" <?php #ifLangDe($metaTags['de']['schlusselworter'], $metaTags['en']['schlusselworter']) ?>">
-		<link rel="apple-touch-icon" sizes="57x57" href="<?=$HOME ?>/dist/favicon/apple-icon-57x57.png">
-		<link rel="apple-touch-icon" sizes="60x60" href="<?=$HOME ?>/dist/favicon/apple-icon-60x60.png">
-		<link rel="apple-touch-icon" sizes="72x72" href="<?=$HOME ?>/dist/favicon/apple-icon-72x72.png">
-		<link rel="apple-touch-icon" sizes="76x76" href="<?=$HOME ?>/dist/favicon/apple-icon-76x76.png">
-		<link rel="apple-touch-icon" sizes="114x114" href="<?=$HOME ?>/dist/favicon/apple-icon-114x114.png">
-		<link rel="apple-touch-icon" sizes="120x120" href="<?=$HOME ?>/dist/favicon/apple-icon-120x120.png">
-		<link rel="apple-touch-icon" sizes="144x144" href="<?=$HOME ?>/dist/favicon/apple-icon-144x144.png">
-		<link rel="apple-touch-icon" sizes="152x152" href="<?=$HOME ?>/dist/favicon/apple-icon-152x152.png">
-		<link rel="apple-touch-icon" sizes="180x180" href="<?=$HOME ?>/dist/favicon/apple-icon-180x180.png">
-		<link rel="icon" type="image/png" sizes="192x192" href="<?=$HOME ?>/dist/favicon/android-icon-192x192.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="<?=$HOME ?>/dist/favicon/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="96x96" href="<?=$HOME ?>/dist/favicon/favicon-96x96.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="<?=$HOME ?>/dist/favicon/favicon-16x16.png">
-		<link rel="manifest" href="<?=$HOME ?>/dist/favicon/manifest.json">
-		<link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.css" />
-		<meta name="msapplication-TileColor" content="#ffffff">
-		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-		<meta name="theme-color" content="#ffffff">
 		<script>
 			// function loadGAonConsent() {
 			// 	window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;

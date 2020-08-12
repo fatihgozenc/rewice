@@ -1,4 +1,4 @@
-import { homeParallax, homeDarkParallax } from './parallax';
+import { homeParallax, homeParallaxEng } from './parallax';
 import lazyLoad from './lazyLoad';
 import sliders from './sliders';
 import menuToggler from './menuToggler';
@@ -7,6 +7,7 @@ import menuBrighten from './menuBrighten';
 const pageUrl = window.location.pathname;
 
 const isHome = (pageUrl == '/de/' || pageUrl == '/en/') ? true : false;
+const isHomeEn = (pageUrl == '/en/') ? true : false;
 const isLeistungen = (pageUrl == '/leistungen/' || pageUrl == '/en/services/') ? true : false;
 const isKontakt = (pageUrl == '/kontakt/' || pageUrl == '/en/contact/') ? true : false;
 const isImpressum = (pageUrl == '/impressum/' || pageUrl == '/en/imprint/') ? true : false;
@@ -23,5 +24,6 @@ menuBrighten();
 if (isHome) {
 	homeParallax();
 }
-
-console.log
+if (isHomeEn) {
+	homeParallaxEng();
+}

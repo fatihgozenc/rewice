@@ -63,3 +63,15 @@
     }
   }
 }
+
+.maincontent{
+	&__en, &__de {
+		padding-top: 15rem;
+		@include md {
+			padding-top: 0;
+		}
+		@include lg {
+			padding-top: 15rem;
+		}
+	}
+}

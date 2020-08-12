@@ -54,4 +54,33 @@
 	@include xxl {
 		@include parallaxStyle(900px, 3);
 	}
+
+	&__wrapper{
+		&--mountain{
+			padding-top: 35vh;
+			@include md {
+				padding-top: 25vh;
+			}
+			@include xl {
+				padding: 0;
+			}
+			&-back{
+				width: 100%;
+			}
+			&-front{
+				width: 35%;
+				left: 32% !important;
+				top: 30% !important;
+				padding-top: 25vh;
+				@include md {
+					padding-top: 18vh;
+				}
+				@include xl {
+					padding: 0;
+				}
+			}	
+		}
+	}
+
+	
 }

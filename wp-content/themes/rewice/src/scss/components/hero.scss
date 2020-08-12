@@ -34,7 +34,6 @@
 			background-size: cover;
 			background-position: center;
 		}
-	
 	}
 
 	&.leistungen {
@@ -61,66 +60,6 @@
 		}
 	}
 
-	&__dark {
-		height: 100vh;
-		background-size: 250%;
-		background-position: top;
-		background-repeat: no-repeat;
-		width: 100%;
-		z-index: -1;
-		@include md {
-			background-size: 200%;
-		}
-		@include xl {
-			background-size: contain;
-		}
-		&__layer{
-			background-size: 180%;
-			width: 100%;
-			min-height: 25%;
-			position: absolute;
-			@include md {
-				background-size: 150%;
-			}
-			@include xl {
-				background-size: contain;
-			}
-			&--bg {
-				top: 0;
-				z-index: -5;
-				height: 100%;
-			}
-			&--one{
-				z-index: -4;
-				top: 5% !important;
-				height: 80%;
-				@include xl {
-					top: 15% !important;
-				}
-			}
-			&--two{
-				z-index: -3;
-				top: initial !important;
-				height: 90%;
-				bottom: -10vh;
-				@include xl {
-					bottom: -25vh;
-				}
-			}
-			&--three{
-				z-index: -2;
-				top: initial !important;
-				height: 50%;
-				bottom: -4vh;
-				background-size: 350%;
-
-				@include xl {
-					background-size: 100%;
-					bottom: -40vh;
-				}
-			}
-		}
-	}
 	&__image{
 		height: 50vh;
 		position: absolute;
@@ -142,10 +81,6 @@
 
 
 	&__content{
-		// padding: 5%;
-
-	
-	
 		&--scroller{
 			align-items: center;
 			display: flex;
@@ -182,21 +117,41 @@
 			
 		}
 		&--centered{
+			pointer-events: all;
 			margin: 0 auto;
 			padding: 10% 5%;
 			@include lg {
-				width: 50%;
+				width: 60%;
 				margin: 0 0 0 11%;
 				padding: 7% 10%;
+			}
+
+			&-en{
+				padding: 60vh 5% 0 5%;
+				@include md {
+					padding: 55vh 5% 0 5%;
+				}
+				@include xl {
+					padding: 82vh 0 0 10%;
+				}
 			}
 		}
 
 
 		&--main{
+			pointer-events: all;
 			padding: 20vh 5%;
 			@include lg {
 				padding: 30vh 10% 0 10%;
-				width: 50%;
+				width: 53%;
+			}
+
+			&-en{
+				padding: 15vh 5% 0 5%;
+				z-index: 10;
+				@include xl {
+					padding: 50vh 10% 0 10%;
+				}
 			}
 
 			&.leistungen {
@@ -231,11 +186,6 @@
 			}
 		}
 
-		&--en {
-			@include lg {
-				padding: 50vh 10% 0 10%;
-			}
-		}
 		&--right{
 			text-align: right;
 			@include md {

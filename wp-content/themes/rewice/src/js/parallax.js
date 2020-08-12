@@ -6,3 +6,10 @@ export const homeParallax = () => {
 		let parallaxInstance = new Parallax(scene);
 	}
 }
+
+export const homeParallaxEng = () => {
+	if (document.querySelector('.parallax__wrapper--mountains') != null) {
+		const sceneMountains = document.querySelector('.parallax__wrapper--mountains');
+		let parallaxInstanceMountains = new Parallax(sceneMountains);
+	}
+}

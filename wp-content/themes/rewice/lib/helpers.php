@@ -16,6 +16,4 @@ function createSlug($str, $delimiter = '-'){
 	return $slug;
 }
 
-
-
 ?>

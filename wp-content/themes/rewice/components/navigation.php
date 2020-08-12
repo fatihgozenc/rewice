@@ -4,7 +4,7 @@ $logo = get_field('logo', 'option');
 
 function Navigation($menuLinks, $primaryLangUrl, $secondaryLangUrl, $tel, $email, $request){ 
 		global $HOME;?>
-	<header attr="<?= $tel ?>" class="menu">
+	<header class="menu">
 		<a href="/" id="logo"><img class="menu__logo" src="<?= $HOME ?>/dist/images/logo-light.svg" alt="Rewice Logo"></a>
 		<a id="toggler" href="javascript:void(0);" class="nav__toggler">
 			<?php Icons('toggler');?>

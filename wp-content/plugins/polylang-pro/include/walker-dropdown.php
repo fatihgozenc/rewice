@@ -67,7 +67,7 @@ class PLL_Walker_Dropdown extends Walker {
 	 * @param array $args
 	 * @return string
 	 */
-	public function walk( $elements, $args = array() ) {
+	public function walk( $elements, $max_depth, ...$args ) {
 		$output = '';
 		$args = wp_parse_args( $args, array( 'value' => 'slug', 'name' => 'lang_choice' ) );
 

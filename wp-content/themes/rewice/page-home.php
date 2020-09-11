@@ -48,7 +48,7 @@
 					<img class="cards__item--icon" src="<?= $item['icon'] ?>" alt="<?= $item['info']['titel'] ?>">
 					<h3 class="cards__item--title"><?= $item['info']['titel'] ?></h3>
 					<div class="cards__item--content"><?= $item['info']['inhalt'] ?></div>
-					<button class="rewice__button--action"><img height="32" src="<?= $HOME . "/dist/images/action.svg"?>" alt="Action Icon"></button>
+					<button class="rewice__button"><?= ifLangDe('Mehr Lesen', 'Read More'); ?></button>
 				</a>
 			<?php endforeach; ?>
 		</section>

@@ -120,8 +120,11 @@ add_filter('pings_open', '__return_false', 20, 2);
 
 //REMOVE EDITOR FOR SPESIFIC PAGES
 function hide_editor() {
-	$post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'] ;
+	// Get the Post ID
+	if( isset( $_GET['post'] ) ) $post_id = $_GET['post'];
+	elseif( isset( $_POST['post_ID'] ) ) $post_id = $_POST['post_ID'];
 	if( !isset( $post_id ) ) return;
+	
 	$template_file = get_post_meta($post_id, '_wp_page_template', true);
 
 	if(

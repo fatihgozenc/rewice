@@ -15,6 +15,7 @@
 			}
 			@include xl {
 				flex: 65%;
+				justify-content: space-between;
 			}
 		}
 		& > :nth-child(3){

@@ -53,7 +53,7 @@ const paths = {
 
 export const serve = (done) => {
 	server.init({
-		proxy: "http://rewice.narcissundtaurus.com"
+		proxy: "http://rewice.test"
 	});
 	done();
 }

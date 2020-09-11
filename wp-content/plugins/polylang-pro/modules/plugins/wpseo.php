@@ -51,7 +51,7 @@ class PLL_WPSEO {
 			}
 
 			add_filter( 'pll_home_url_white_list', array( $this, 'wpseo_home_url_white_list' ) );
-			add_action( 'wpseo_opengraph', array( $this, 'wpseo_ogp' ), 2 );
+			add_action( 'wpseo_frontend_presenters', array( $this, 'wpseo_ogp' ), 2 );
 			add_filter( 'wpseo_canonical', array( $this, 'wpseo_canonical' ) );
 		} else {
 			add_action( 'admin_init', array( $this, 'wpseo_register_strings' ) );

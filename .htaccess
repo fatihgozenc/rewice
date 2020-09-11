@@ -1,3 +1,15 @@
+# PERMANENT HTTP AUTH
+AuthUserFile /kunden/homepages/34/d765179445/htdocs/.htpasswd
+AuthType Basic
+AuthName "Restricted Area"
+Require valid-user
+
+# HTTPS REDIRECTION
+RewriteEngine On
+RewriteCond %{HTTPS} !=on
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301,NE] 
+
+# WP DEFAULT
 RewriteEngine On
 RewriteBase /
 RewriteRule ^index\.php$ - [L]
@@ -5,5 +17,6 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /index.php [L]
 
+# CREDENTIAL SECURITY
 Redirect 301 /.malumatenv /
 Redirect 301 /database /

@@ -74,3 +74,4 @@ else
 	echo -e "${PURPLE}USE"	"./malumat show${NC} to see what you saved in "$DBPATH;
 	echo -e "${RED}USE"	"./malumat flush${NC} to remove all temporary saves in "$DBPATH;
 	echo "";
+fi;

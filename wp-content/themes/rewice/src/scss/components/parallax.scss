@@ -70,13 +70,14 @@
 			&-front{
 				width: 35%;
 				left: 32% !important;
-				top: 30% !important;
+				top: 42% !important;
 				padding-top: 25vh;
 				@include md {
 					padding-top: 18vh;
 				}
 				@include xl {
 					padding: 0;
+					top: 54% !important;
 				}
 			}	
 		}

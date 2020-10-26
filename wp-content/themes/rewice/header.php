@@ -42,6 +42,7 @@
 		<?php wp_head(); ?>
 	</head>
 	<body data-fade-in="true" >
+	<div id="page">
 		<?php Navigation(
 			$header_menu, 
 			$langDE['url'], 

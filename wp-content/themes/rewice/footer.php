@@ -30,6 +30,7 @@ $contact = get_field('kontaktinfo', 'option');
 			</div>
 		</div>
 	</footer>
+	</div>
 		<?php wp_footer(); ?>
 		<script type="text/javascript">
 			(function (d, t) {

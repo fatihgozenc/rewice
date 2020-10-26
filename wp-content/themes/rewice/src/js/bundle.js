@@ -1,4 +1,5 @@
 import { homeParallax, homeParallaxEng } from './parallax';
+import cookies from './cookies';
 import lazyLoad from './lazyLoad';
 import sliders from './sliders';
 import menuToggler from './menuToggler';

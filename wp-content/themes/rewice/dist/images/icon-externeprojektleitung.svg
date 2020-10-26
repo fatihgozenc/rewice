@@ -1,13 +1,1 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" width="52" height="44" viewBox="0 0 52 44">
-  <g id="Group_29" data-name="Group 29" transform="translate(-4467 -1880)">
-    <g id="Ellipse_13" data-name="Ellipse 13" transform="translate(4467 1880)" fill="none" stroke="#bc7a48" stroke-width="2">
-      <circle cx="22" cy="22" r="22" stroke="none"/>
-      <circle cx="22" cy="22" r="21" fill="none"/>
-    </g>
-    <g id="Ellipse_14" data-name="Ellipse 14" transform="translate(4487 1886)" fill="none" stroke="#bc7a48" stroke-width="2">
-      <circle cx="16" cy="16" r="16" stroke="none"/>
-      <circle cx="16" cy="16" r="15" fill="none"/>
-    </g>
-  </g>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="52" height="44"><g data-name="Group 29" fill="none" stroke="#bc7a48" stroke-width="2"><g data-name="Ellipse 13"><circle cx="22" cy="22" r="22" stroke="none"/><circle cx="22" cy="22" r="21"/></g><g data-name="Ellipse 14" transform="translate(20 6)"><circle cx="16" cy="16" r="16" stroke="none"/><circle cx="16" cy="16" r="15"/></g></g></svg>

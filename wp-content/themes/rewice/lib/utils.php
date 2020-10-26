@@ -68,12 +68,6 @@ function disable_emojis() {
  }
  add_action( 'init', 'disable_emojis' );
  
- /**
-	* Filter function used to remove the tinymce emoji plugin.
-	* 
-	* @param array $plugins 
-	* @return array Difference betwen the two arrays
-	*/
  function disable_emojis_tinymce( $plugins ) {
 	if ( is_array( $plugins ) ) {
 	return array_diff( $plugins, array( 'wpemoji' ) );
@@ -81,14 +75,7 @@ function disable_emojis() {
 	return array();
 	}
  }
- 
- /**
-	* Remove emoji CDN hostname from DNS prefetching hints.
-	*
-	* @param array $urls URLs to print for resource hints.
-	* @param string $relation_type The relation type the URLs are printed for.
-	* @return array Difference betwen the two arrays.
-	*/
+
  function disable_emojis_remove_dns_prefetch( $urls, $relation_type ) {
 	if ( 'dns-prefetch' == $relation_type ) {
 	/** This filter is documented in wp-includes/formatting.php */
@@ -100,7 +87,6 @@ function disable_emojis() {
  return $urls;
  }
 
-//Remove Gutenberg Block Library CSS from loading on the frontend
 function smartwp_remove_wp_block_library_css(){
  wp_dequeue_style( 'wp-block-library' );
  wp_dequeue_style( 'wp-block-library-theme' );
@@ -136,4 +122,5 @@ function hide_editor() {
 }
 
 add_action( 'admin_init', 'hide_editor' );
+
 ?>

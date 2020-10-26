@@ -1,1 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35"><g data-name="house-24px (1)"><path data-name="Rectangle 23" fill="none" d="M0 0h35v35H0z"/><path data-name="Path 49" d="M27.678 13.661V6.006h-4.335v3.755l-5.779-5.2-14.448 13H7.45v11.562h7.224v-8.669h5.779v8.669h7.224V17.561h4.339zm-13 1.011a2.89 2.89 0 115.779 0z" fill="#0c2a4e"/></g></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 35 35">
+  <g id="house-24px_1_" data-name="house-24px (1)" transform="translate(0.181 0.181)">
+    <g id="Bounding_Box" transform="translate(-0.288 -0.288)">
+      <rect id="Rectangle_23" data-name="Rectangle 23" width="35" height="35" transform="translate(0.107 0.107)" fill="none"/>
+    </g>
+    <g id="Master" transform="translate(2.935 4.38)">
+      <path id="Path_49" data-name="Path 49" d="M26.562,12.1V4.445H22.227V8.2L16.448,3,2,16H6.334V27.562h7.224V18.893h5.779v8.669h7.224V16H30.9Zm-13,1.011a2.89,2.89,0,1,1,5.779,0Z" transform="translate(-2 -3)" fill="#0c2a4e"/>
+    </g>
+  </g>
+</svg>
